@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Tupã+ — Download Oficial</title>
+
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --muted:#9aa4b2;
+      --accent:#06b6d4
+    }
+
+    *{box-sizing:border-box}
+
+    body{
+      font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial;
+      margin:0;
+      background:linear-gradient(180deg,#071022 0%, #071827 60%);
+      color:#e6eef6
+    }
+
+    .container{
+      max-width:900px;
+      margin:36px auto;
+      padding:20px
+    }
+
+    header{
+      display:flex;
+      align-items:center;
+      gap:16px;
+      margin-bottom:28px
+    }
+
+    header svg{
+      width:56px;
+      height:56px
+    }
+
+    h1{
+      margin:0;
+      font-size:22px
+    }
+
+    p.lead{
+      margin:6px 0 0;
+      color:var(--muted)
+    }
+
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02));
+      border:1px solid rgba(255,255,255,0.04);
+      padding:18px;
+      border-radius:14px
+    }
+
+    .meta{
+      display:flex;
+      gap:16px;
+      align-items:center
+    }
+
+    .icon{
+      width:72px;
+      height:72px;
+      background:linear-gradient(135deg,var(--accent),#7c3aed);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:16px
+    }
+
+    .name{
+      font-size:20px;
+      margin:0
+    }
+
+    .desc{
+      color:var(--muted);
+      font-size:14px;
+      margin-top:8px
+    }
+
+    .btn-row{
+      display:flex;
+      gap:12px;
+      margin-top:18px
+    }
+
+    .btn{
+      padding:10px 14px;
+      border-radius:10px;
+      text-decoration:none;
+      font-size:15px;
+      border:1px solid rgba(255,255,255,0.08);
+      color:#fff
+    }
+
+    .btn.download{
+      background:linear-gradient(90deg,var(--accent),#7c3aed);
+      border:0;
+      color:#021024;
+      font-weight:600
+    }
+
+    footer{
+      margin-top:30px;
+      color:var(--muted);
+      font-size:13px
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <header>
+      <svg viewBox="0 0 24 24" fill="none">
+        <rect x="1" y="3" width="22" height="18" rx="3"
+              stroke="url(#g)" stroke-width="1.2"/>
+        <defs>
+          <linearGradient id="g" x1="0" x2="1">
+            <stop offset="0" stop-color="#06b6d4"/>
+            <stop offset="1" stop-color="#7c3aed"/>
+          </linearGradient>
+        </defs>
+      </svg>
+
+      <div>
+        <h1>Tupã+</h1>
+        <p class="lead">
+          Aplicativo oficial de turismo, história e informações da cidade de Tupã.
+        </p>
+      </div>
+    </header>
+
+    <main>
+      <article class="card">
+        <div class="meta">
+          <div class="icon">
+            <img src="icons/logo_tupaplus.png" alt="Tupã+" width="44" height="44">
+          </div>
+
+          <div>
+            <h2 class="name">Tupã+</h2>
+            <p class="desc">
+              Descubra pontos turísticos, história, cultura, eventos e informações
+              importantes da cidade de Tupã em um só aplicativo.
+            </p>
+          </div>
+        </div>
+
+        <div class="btn-row">
+          <a class="btn download" href="apks/tupa-plus.apk" download>
+            Baixar APK
+          </a>
+          <a class="btn" href="#" onclick="alert('Versão Android do aplicativo Tupã+')">
+            Mais informações
+          </a>
+        </div>
+      </article>
+    </main>
+
+    <footer>
+      © 2026 • Tupã+ — Todos os direitos reservados
+    </footer>
+
+  </div>
+</body>
+</html>
