@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Explore Tupã</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --bg:#f4e3b2;
+    --primary:#8b5a00;
+    --secondary:#d9b15f;
+    --card:#fff6dc;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Montserrat',sans-serif;
+}
+
+body{
+    background:var(--bg);
+    color:#333;
+}
+
+/* NAVBAR */
+header{
+    background:linear-gradient(90deg,#e2b25b,#d19a3d);
+    padding:16px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 4px 10px rgba(0,0,0,.15);
+}
+
+header h1{
+    font-size:22px;
+    font-weight:700;
+}
+
+nav a{
+    margin-left:24px;
+    text-decoration:none;
+    color:#000;
+    font-weight:600;
+}
+
+nav a:hover{
+    text-decoration:underline;
+}
+
+/* HERO */
+.hero{
+    max-width:500px;
+    margin:30px auto;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+.hero img{
+    width:100%;
+    display:block;
+}
+
+/* CONTAINER */
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:28px;
+}
+
+.card{
+    background:var(--card);
+    border-radius:18px;
+    padding:30px 20px;
+    text-align:center;
+    box-shadow:0 6px 15px rgba(0,0,0,.15);
+    transition:.3s;
+    cursor:pointer;
+    text-decoration:none;
+    color:inherit;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 12px 30px rgba(0,0,0,.25);
+}
+
+.card img{
+    width:56px;
+    margin-bottom:16px;
+}
+
+.card h3{
+    font-size:16px;
+    color:var(--primary);
+}
+
+/* DESTAQUE */
+.highlight{
+    margin-top:60px;
+    background:linear-gradient(135deg,#f6d27c,#e3b04b);
+    border-radius:22px;
+    padding:30px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 8px 20px rgba(0,0,0,.2);
+    text-decoration:none;
+    color:inherit;
+}
+
+.highlight h2{
+    font-size:24px;
+}
+
+.highlight img{
+    width:60px;
+}
+
+/* FOOTER */
+footer{
+    margin-top:60px;
+    padding:20px;
+    background:#d19a3d;
+    text-align:center;
+    font-size:14px;
+}
+
+/* RESPONSIVO */
+@media(max-width:768px){
+    header{
+        flex-direction:column;
+        gap:10px;
+    }
+    nav{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Explore Tupã</h1>
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="raizes.html">História</a>
+        <a href="trilhas.html">Turismo</a>
+        <a href="legado.html">Cultura</a>
+        <a href="contato.html">Contato</a>
+    </nav>
+</header>
+
+<div class="hero">
+    <img src="imgs/igreja_matriz_de_sao_pedro_em_tupa.jpg" alt="Catedral de Tupã">
+</div>
+
+<section class="container">
+
+    <div class="grid">
+
+        <a href="raizes.html" class="card">
+            <img src="D:\ExploreTupa\imgs\bg_btn_historia_tupa.png">
+            <h3>Raízes de Tupã</h3>
+        </a>
+
+        <a href="legado.html" class="card">
+            <img src="D:\ExploreTupa\imgs\legado.png">
+            <h3>Legado Cultural</h3>
+        </a>
+
+        <a href="trilhas.html" class="card">
+            <img src="D:\ExploreTupa\imgs\bg_btn_trilha.png">
+            <h3>Trilhas e Natureza</h3>
+        </a>
+
+        <a href="orgaos.html" class="card">
+            <img src="D:\ExploreTupa\imgs\organs_publicos.png">
+            <h3>Órgãos Públicos</h3>
+        </a>
+
+        <a href="fotos.html" class="card">
+            <img src="D:\ExploreTupa\imgs\bg_btn_fotos_antigas.png">
+            <h3>Fotos Históricas</h3>
+        </a>
+
+        <a href="curiosidades.html" class="card">
+            <img src="D:\ExploreTupa\imgs\bg_btn_curiosidades.png">
+            <h3>Curiosidades</h3>
+        </a>
+
+        <a href="rota.html" class="card">
+            <img src="D:\ExploreTupa\imgs\bg_btn_rota_cultural.png">
+            <h3>Rota Cultural</h3>
+        </a>
+
+        <a href="hospedagem.html" class="card">
+            <img src="D:\ExploreTupa\imgs\bg_btn_hospegem.png">
+            <h3>Hospedagem</h3>
+        </a>
+
+        <a href="alimentacao.html" class="card">
+            <img src="D:\ExploreTupa\imgs\bg_btn_alimentacao.png">
+            <h3>Alimentação</h3>
+        </a>
+
+    </div>
+
+    <a href="lendas.html" class="highlight">
+        <h2>🌟 Lendas de Tupã & Quiz Interativo</h2>
+        <img src="D:\ExploreTupa\imgs\bg_btn_lenda_quiz.png">
+    </a>
+
+</section>
+
+<footer>
+    © 2026 • Explore Tupã • Turismo e Cultura
+</footer>
+
+</body>
+</html>
