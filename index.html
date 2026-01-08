@@ -1,94 +1,237 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Victor Gabriel Ribas Fanfoni – Desenvolvedor Android</title>
-  <link rel="stylesheet" href="style.css" />
-  <meta name="description" content="Portfólio de Victor Gabriel Ribas Fanfoni – Desenvolvedor Android especialista em Kotlin, Jetpack Compose e Firebase."/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Explore Tupã</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --bg:#f4e3b2;
+    --primary:#8b5a00;
+    --secondary:#d9b15f;
+    --card:#fff6dc;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Montserrat',sans-serif;
+}
+
+body{
+    background:var(--bg);
+    color:#333;
+}
+
+/* NAVBAR */
+header{
+    background:linear-gradient(90deg,#e2b25b,#d19a3d);
+    padding:16px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 4px 10px rgba(0,0,0,.15);
+}
+
+header h1{
+    font-size:22px;
+    font-weight:700;
+}
+
+nav a{
+    margin-left:24px;
+    text-decoration:none;
+    color:#000;
+    font-weight:600;
+}
+
+nav a:hover{
+    text-decoration:underline;
+}
+
+/* HERO */
+.hero{
+    max-width:500px;
+    margin:30px auto;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+.hero img{
+    width:100%;
+    display:block;
+}
+
+/* CONTAINER */
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+/* GRID */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:28px;
+}
+
+.card{
+    background:var(--card);
+    border-radius:18px;
+    padding:30px 20px;
+    text-align:center;
+    box-shadow:0 6px 15px rgba(0,0,0,.15);
+    transition:.3s;
+    cursor:pointer;
+    text-decoration:none;
+    color:inherit;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 12px 30px rgba(0,0,0,.25);
+}
+
+.card img{
+    width:56px;
+    margin-bottom:16px;
+}
+
+.card h3{
+    font-size:16px;
+    color:var(--primary);
+}
+
+/* DESTAQUE */
+.highlight{
+    margin-top:60px;
+    background:linear-gradient(135deg,#f6d27c,#e3b04b);
+    border-radius:22px;
+    padding:30px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 8px 20px rgba(0,0,0,.2);
+    text-decoration:none;
+    color:inherit;
+}
+
+.highlight h2{
+    font-size:24px;
+}
+
+.highlight img{
+    width:60px;
+}
+
+/* FOOTER */
+footer{
+    margin-top:60px;
+    padding:20px;
+    background:#d19a3d;
+    text-align:center;
+    font-size:14px;
+}
+
+/* RESPONSIVO */
+@media(max-width:768px){
+    header{
+        flex-direction:column;
+        gap:10px;
+    }
+    nav{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+}
+</style>
 </head>
+
 <body>
-  <div class="container">
-    <header>
-      <h1>Victor Gabriel Ribas Fanfoni</h1>
-      <p class="headline">Desenvolvedor Android | Kotlin • Jetpack Compose • Firebase</p>
-      <p class="contact">
-        <strong>Contato:</strong> (11) 93619-6194 |
-        <a href="mailto:victorfanfoni@gmail.com">victorfanfoni@gmail.com</a> |
-        <a href="https://github.com/victorfanfoni" target="_blank" rel="noopener noreferrer">GitHub</a>
-      </p>
-      <p class="social">
-        <strong>Redes Sociais:</strong> Victor Fanfoni
-      </p>
-    </header>
 
-    <main>
-      <section>
-        <h2>Objetivo Profissional</h2>
-        <p>Atuar como Desenvolvedor Android, aplicando conhecimentos em Kotlin, Jetpack Compose e Firebase para criar soluções inovadoras e escaláveis, contribuindo para o crescimento tecnológico da organização.</p>
-      </section>
+<header>
+    <h1>Explore Tupã</h1>
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="raizes.html">História</a>
+        <a href="trilhas.html">Turismo</a>
+        <a href="legado.html">Cultura</a>
+        <a href="contato.html">Contato</a>
+    </nav>
+</header>
 
-      <section>
-        <h2>Formação Acadêmica</h2>
-        <ul>
-          <li>Análise e Desenvolvimento de Sistemas – FIAP (2023 – 2024)</li>
-          <li>Ensino Fundamental e Médio – Concluídos</li>
-        </ul>
-      </section>
+<div class="hero">
+    <img src="imgs/igreja_matriz_de_sao_pedro_em_tupa.jpg" alt="Catedral de Tupã">
+</div>
 
-      <section>
-        <h2>Habilidades Técnicas</h2>
-        <ul>
-          <li><strong>Linguagens:</strong> Kotlin, XML</li>
-          <li><strong>Frameworks & Ferramentas:</strong> Jetpack Compose, Firebase, Android Studio</li>
-          <li><strong>Arquitetura:</strong> MVC</li>
-          <li><strong>Controle de Versão:</strong> Git/GitHub</li>
-          <li><strong>Outros:</strong> Elétrica básica, montagem e manutenção de computadores</li>
-        </ul>
-      </section>
+<section class="container">
 
-      <section>
-        <h2>Projetos em Destaque</h2>
-        <ul>
-          <li><strong>Calculadora:</strong> Aplicativo Android para avaliação de expressões matemáticas utilizando mXparser.</li>
-          <li><strong>EmotionDecoder:</strong> Aplicativo para análise de sentimentos via API usando arquitetura MVC.</li>
-          <li><strong>Ibec:</strong> Sistema de autenticação e controle financeiro para igrejas.</li>
-          <li><strong>EcoLab:</strong> Aplicativo educacional sobre sustentabilidade com recursos interativos.</li>
-          <li><strong>Transporte para Todos:</strong> Aplicativo oficial da Prefeitura de Tupã para emissão de carteirinhas digitais.</li>
-          <li><strong>Acesso para Todos:</strong> Aplicativo oficial da Prefeitura de Tupã para emissão de carteirinhas digitais.</li>
-          <li><strong>Tupã+:</strong> Aplicativo que apresenta a história da cidade de Tupã, os povos originários da região, cachoeiras, órgãos públicos, fotos históricas e outros pontos de interesse.</li>
-        </ul>
-        <p>Veja mais no meu <a href="https://github.com/victorfanfoni" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
-      </section>
+    <div class="grid">
 
-      <section>
-        <h2>Experiência Profissional</h2>
-        <ul>
-          <li><strong>Prefeitura de Tupã:</strong> Auxiliar de Escritório</li>
-          <li><strong>Supermercado Avenida:</strong> Açougueiro / Empacotador</li>
-        </ul>
-      </section>
+        <a href="raizes.html" class="card">
+            <img src="D:\ExploreTupa\imgs\bg_btn_historia_tupa.png">
+            <h3>Raízes de Tupã</h3>
+        </a>
 
-      <section>
-        <h2>Qualificações e Atividades Profissionais</h2>
-        <ul>
-          <li>Manutenção de Computadores – Senac (interrompido)</li>
-        </ul>
-      </section>
+        <a href="legado.html" class="card">
+            <img src="D:\ExploreTupa\imgs\legado.png">
+            <h3>Legado Cultural</h3>
+        </a>
 
-      <section>
-        <h2>Informações Adicionais</h2>
-        <ul>
-          <li>Preferência em desenvolvimento mobile e inovação tecnológica</li>
-          <li>Projetos publicados no GitHub</li>
-          <li>Projetos publicados na Google Play Store</li>
-        </ul>
-      </section>
-    </main>
+        <a href="trilhas.html" class="card">
+            <img src="D:\ExploreTupa\imgs\bg_btn_trilha.png">
+            <h3>Trilhas e Natureza</h3>
+        </a>
 
-    <footer>
-      <p>&copy; 2025 Victor Gabriel Ribas Fanfoni. Todos os direitos reservados.</p>
-    </footer>
-  </div>
+        <a href="orgaos.html" class="card">
+            <img src="D:\ExploreTupa\imgs\organs_publicos.png">
+            <h3>Órgãos Públicos</h3>
+        </a>
+
+        <a href="fotos.html" class="card">
+            <img src="D:\ExploreTupa\imgs\bg_btn_fotos_antigas.png">
+            <h3>Fotos Históricas</h3>
+        </a>
+
+        <a href="curiosidades.html" class="card">
+            <img src="D:\ExploreTupa\imgs\bg_btn_curiosidades.png">
+            <h3>Curiosidades</h3>
+        </a>
+
+        <a href="rota.html" class="card">
+            <img src="D:\ExploreTupa\imgs\bg_btn_rota_cultural.png">
+            <h3>Rota Cultural</h3>
+        </a>
+
+        <a href="hospedagem.html" class="card">
+            <img src="D:\ExploreTupa\imgs\bg_btn_hospegem.png">
+            <h3>Hospedagem</h3>
+        </a>
+
+        <a href="alimentacao.html" class="card">
+            <img src="D:\ExploreTupa\imgs\bg_btn_alimentacao.png">
+            <h3>Alimentação</h3>
+        </a>
+
+    </div>
+
+    <a href="lendas.html" class="highlight">
+        <h2>🌟 Lendas de Tupã & Quiz Interativo</h2>
+        <img src="D:\ExploreTupa\imgs\bg_btn_lenda_quiz.png">
+    </a>
+
+</section>
+
+<footer>
+    © 2026 • Explore Tupã • Turismo e Cultura
+</footer>
+
 </body>
 </html>

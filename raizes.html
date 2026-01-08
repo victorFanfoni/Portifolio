@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raízes de Tupã • História</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --bg:#f4e3b2;
+    --primary:#8b5a00;
+    --card:#fff6dc;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Montserrat',sans-serif;
+}
+
+body{
+    background:var(--bg);
+    color:#333;
+}
+
+/* HEADER */
+header{
+    background:linear-gradient(90deg,#e2b25b,#d19a3d);
+    padding:18px;
+    text-align:center;
+    font-size:20px;
+    font-weight:700;
+}
+
+/* CONTAINER */
+.container{
+    max-width:1100px;
+    margin:auto;
+    padding:30px 20px;
+}
+
+/* HERO */
+.hero img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:18px;
+    box-shadow:0 6px 18px rgba(0,0,0,.25);
+}
+
+/* TEXTO */
+.intro{
+    margin:30px 0;
+    text-align:center;
+    font-size:16px;
+    line-height:1.6;
+}
+
+/* CARD */
+.card{
+    background:var(--card);
+    border-radius:20px;
+    padding:25px;
+    margin-bottom:35px;
+    box-shadow:0 6px 15px rgba(0,0,0,.15);
+}
+
+.card h2{
+    text-align:center;
+    color:var(--primary);
+    margin-bottom:15px;
+}
+
+/* GALERIA */
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:16px;
+    margin:20px 0;
+}
+
+.gallery img{
+    width:100%;
+    height:160px;
+    object-fit:cover;
+    border-radius:14px;
+}
+
+/* TEXTO DO CARD */
+.card p{
+    font-size:16px;
+    line-height:1.6;
+    margin-top:10px;
+}
+
+/* BOTÃO */
+.btn{
+    display:block;
+    width:100%;
+    margin-top:20px;
+    padding:14px;
+    background:#e3b04b;
+    border:none;
+    border-radius:16px;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+}
+
+.btn:hover{
+    background:#d19a3d;
+}
+
+/* FOOTER */
+footer{
+    margin-top:50px;
+    padding:20px;
+    text-align:center;
+    font-size:14px;
+    background:#d19a3d;
+}
+</style>
+</head>
+
+<body>
+
+<header>📖 História de Tupã - São Paulo</header>
+
+<section class="container">
+
+    <div class="hero">
+        <img src="imgs/img_city_icon.jpg" alt="Cidade de Tupã">
+    </div>
+
+    <p class="intro">
+        Aqui está uma visão completa da história de Tupã, no interior do estado de São Paulo.
+    </p>
+
+    <!-- FUNDAÇÃO -->
+    <div class="card">
+        <h2>📅 Fundação e origem do nome</h2>
+
+        <div class="gallery">
+            <img src="imgs/primeiravistapanoramicadetupa.jpg">
+            <img src="imgs/residenciadofundadordacidadeluizdesouzaleao.jpg">
+            <img src="imgs/deus_tupa.jpg">
+        </div>
+
+        <p>
+            • 12 de outubro de 1929 foi a data oficial de fundação, idealizada por Luís de Sousa Leão,
+            empreendedor pernambucano que escolheu uma área de floresta virgem entre os rios do Peixe
+            e Feio/Aguapeí.<br><br>
+            • O nome Tupã significa “trovão” ou “espírito bom” no tupi-guarani, em homenagem aos povos
+            indígenas da região.
+        </p>
+
+        <button class="btn">🔎 Ver mais sobre a Fundação</button>
+    </div>
+
+    <!-- CONFLITOS -->
+    <div class="card">
+        <h2>⚔️ Conflitos e pacificação indígena</h2>
+
+        <div class="gallery">
+            <img src="imgs/resistencia_indigena.jpg">
+            <img src="imgs/resistencia.jpg">
+            <img src="imgs/pacificacao_indigena.jpg">
+        </div>
+
+        <p>
+            • Os colonizadores enfrentaram forte resistência dos povos caingangues,
+            resultando em conflitos violentos.<br><br>
+            • A pacificação ocorreu graças à mediação da índia Vanuíre, figura histórica
+            lembrada até hoje na cidade.
+        </p>
+
+        <button class="btn">⚔️ Saber mais sobre os conflitos</button>
+    </div>
+
+    <!-- POLÍTICA -->
+    <div class="card">
+        <h2>🏛 Estrutura política e urbana</h2>
+
+        <div class="gallery">
+            <img src="imgs/vistaaerea9.jpg">
+            <img src="imgs/mapa_municipio_tupan.jpg">
+            <img src="imgs/tupan1948fotogalante.jpg">
+        </div>
+
+        <p>
+            • Em 1934, Tupã virou distrito de Glicério.<br>
+            • Em 1938 tornou-se município, instalado em 1939.<br>
+            • Distritos como Varpa, Iacri e Arco-Íris marcaram sua expansão.
+        </p>
+
+        <button class="btn">🏛 Ver estrutura política</button>
+    </div>
+
+    <!-- ECONOMIA -->
+    <div class="card">
+        <h2>🌱 Economia e desenvolvimento</h2>
+
+        <div class="gallery">
+            <img src="imgs/plantacao_cafe.jpg">
+            <img src="imgs/plantacao_amendoim.jpg">
+            <img src="imgs/platacao_algodao.jpg">
+        </div>
+
+        <p>
+            • Economia inicialmente baseada no café.<br>
+            • A geada de 1975 encerrou o ciclo cafeeiro.<br>
+            • Hoje, destaque para amendoim, algodão e pecuária.
+        </p>
+
+        <button class="btn">📈 Evolução da economia</button>
+    </div>
+
+    <!-- ATUALIDADE -->
+    <div class="card">
+        <h2>📊 Tupã hoje</h2>
+
+        <div class="gallery">
+            <img src="imgs/igreja_matriz_de_sao_pedro_em_tupa.jpg">
+            <img src="imgs/cidade.jpg">
+            <img src="imgs/paco.jpg">
+        </div>
+
+        <p>
+            • População aproximada de 65 mil habitantes.<br>
+            • Capital Nacional da Fotografia.<br>
+            • Referência regional em cultura e turismo.
+        </p>
+
+        <button class="btn">📊 Ver dados atuais</button>
+    </div>
+
+</section>
+
+<footer>
+    Conteúdo adaptado por Victor Fanfoni • 📍 Tupã - Capital Nacional da Fotografia
+</footer>
+
+</body>
+</html>

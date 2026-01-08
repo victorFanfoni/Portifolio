@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Galeria • Tupã</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --bg:#FDF0D7;
+    --verde:#2D5F4C;
+    --dourado:#C89B3C;
+    --card:#FFF6E5;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Montserrat',sans-serif;
+}
+
+body{
+    background:var(--bg);
+    padding-bottom:70px;
+}
+
+/* TOOLBAR */
+header{
+    height:60px;
+    background:var(--verde);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+    font-weight:600;
+    font-size:18px;
+    text-align:center;
+    box-shadow:0 4px 10px rgba(0,0,0,.25);
+}
+
+/* TABS */
+.tabs{
+    display:flex;
+    gap:20px;
+    padding:12px;
+    background:#FDF0D7;
+    overflow-x:auto;
+    justify-content:center;
+}
+
+.tabs button{
+    background:none;
+    border:none;
+    font-size:15px;
+    font-weight:600;
+    color:var(--dourado);
+    padding-bottom:6px;
+    cursor:pointer;
+    border-bottom:3px solid transparent;
+}
+
+.tabs button.active{
+    border-color:var(--dourado);
+}
+
+/* HERO IMAGE */
+.hero{
+    margin:12px 15px;
+}
+
+.hero img{
+    width:100%;
+    height:150px;
+    object-fit:contain;
+    background:#fff;
+    border-radius:18px;
+    box-shadow:0 6px 16px rgba(0,0,0,.2);
+}
+
+/* GALERIA */
+.gallery{
+    padding:10px 15px;
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(140px,1fr));
+    gap:12px;
+}
+
+.photo{
+    background:var(--card);
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:0 4px 12px rgba(0,0,0,.15);
+    transition:.3s;
+}
+
+.photo:hover{
+    transform:scale(1.03);
+}
+
+.photo img{
+    width:100%;
+    height:130px;
+    object-fit:cover;
+}
+
+/* FOOTER */
+footer{
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    height:56px;
+    background:var(--verde);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+footer a{
+    text-decoration:none;
+    color:#fff;
+    font-size:18px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    📸 Fotos antigas e atualizadas de Tupã
+</header>
+
+<!-- TABS -->
+<div class="tabs">
+    <button class="active" onclick="trocarGaleria('antigas')">Fotos Antigas</button>
+    <button onclick="trocarGaleria('atuais')">Fotos Atualizadas</button>
+</div>
+
+<!-- IMAGEM DE DESTAQUE -->
+<div class="hero">
+    <img src="imgs/img_camera_galeria.jpg" alt="Galeria Tupã">
+</div>
+
+<!-- GALERIA -->
+<div class="gallery" id="galeria">
+
+    <!-- IMAGENS ANTIGAS -->
+    <div class="photo antiga"><img src="imgs/calendarioaeroportomunicipaldetupa.jpg"></div>
+    <div class="photo antiga"><img src="imgs/antiga2.jpg"></div>
+    <div class="photo antiga"><img src="imgs/antiga3.jpg"></div>
+    <div class="photo antiga"><img src="imgs/antiga4.jpg"></div>
+
+    <!-- IMAGENS ATUAIS -->
+    <div class="photo atual" style="display:none"><img src="imgs/atual1.jpg"></div>
+    <div class="photo atual" style="display:none"><img src="imgs/atual2.jpg"></div>
+    <div class="photo atual" style="display:none"><img src="imgs/atual3.jpg"></div>
+    <div class="photo atual" style="display:none"><img src="imgs/atual4.jpg"></div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <a href="index.html">🏠 Voltar para Início</a>
+</footer>
+
+<script>
+function trocarGaleria(tipo){
+    document.querySelectorAll('.tabs button').forEach(b=>b.classList.remove('active'));
+    event.target.classList.add('active');
+
+    document.querySelectorAll('.photo').forEach(f=>f.style.display='none');
+    document.querySelectorAll('.'+(tipo === 'antigas' ? 'antiga':'atual'))
+        .forEach(f=>f.style.display='block');
+}
+</script>
+
+</body>
+</html>
