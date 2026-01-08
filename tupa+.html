@@ -1,246 +1,274 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Tupã+ — Turismo, História e Cultura</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <style>
-    :root{
-      --bg:#071827;
-      --card:#0b1220;
-      --accent:#06b6d4;
-      --accent2:#7c3aed;
-      --text:#e6eef6;
-      --muted:#9aa4b2;
-    }
+<title>Tupã+ — Guia Turístico Digital</title>
 
-    *{box-sizing:border-box}
+<style>
+:root{
+  --primary:#0ea5e9;
+  --secondary:#22c55e;
+  --dark:#0b1220;
+  --light:#f8fafc;
+  --muted:#64748b;
+}
 
-    body{
-      margin:0;
-      font-family:Inter,system-ui,Segoe UI,Roboto,Arial;
-      background:linear-gradient(180deg,#071022,#071827);
-      color:var(--text);
-      line-height:1.6;
-    }
+*{box-sizing:border-box}
 
-    a{text-decoration:none;color:inherit}
+body{
+  margin:0;
+  font-family:system-ui,Segoe UI,Roboto,Arial;
+  background:#f1f5f9;
+  color:#0f172a;
+}
 
-    .container{
-      max-width:1100px;
-      margin:auto;
-      padding:32px 20px;
-    }
+/* ---------- HEADER ---------- */
+header{
+  background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url("images/tupa-hero.jpg") center/cover no-repeat;
+  color:white;
+}
 
-    /* HERO */
-    .hero{
-      display:grid;
-      grid-template-columns:1.2fr 1fr;
-      gap:40px;
-      align-items:center;
-      padding:40px 0;
-    }
+.header-container{
+  max-width:1200px;
+  margin:auto;
+  padding:80px 20px;
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:40px;
+  align-items:center;
+}
 
-    .hero h1{
-      font-size:38px;
-      margin:0 0 12px;
-    }
+header h1{
+  font-size:48px;
+  margin:0 0 16px;
+}
 
-    .hero p{
-      color:var(--muted);
-      font-size:18px;
-      margin-bottom:24px;
-    }
+header p{
+  font-size:20px;
+  max-width:520px;
+  margin-bottom:28px;
+}
 
-    .btn{
-      display:inline-block;
-      padding:14px 20px;
-      border-radius:12px;
-      font-weight:600;
-    }
+.btn{
+  display:inline-block;
+  padding:14px 22px;
+  border-radius:30px;
+  font-weight:600;
+  text-decoration:none;
+}
 
-    .btn.primary{
-      background:linear-gradient(90deg,var(--accent),var(--accent2));
-      color:#021024;
-    }
+.btn.primary{
+  background:var(--primary);
+  color:white;
+}
 
-    .btn.secondary{
-      border:1px solid rgba(255,255,255,0.15);
-      margin-left:12px;
-    }
+.btn.secondary{
+  border:2px solid white;
+  color:white;
+  margin-left:12px;
+}
 
-    .hero-card{
-      background:var(--card);
-      border-radius:24px;
-      padding:30px;
-      text-align:center;
-      border:1px solid rgba(255,255,255,0.06);
-    }
+/* ---------- APP MOCK ---------- */
+.app-card{
+  background:white;
+  border-radius:26px;
+  padding:28px;
+  text-align:center;
+  box-shadow:0 20px 40px rgba(0,0,0,.2);
+}
 
-    .hero-card img{
-      width:120px;
-      margin-bottom:16px;
-    }
+.app-card img{
+  width:120px;
+  margin-bottom:16px;
+}
 
-    /* SECTIONS */
-    section{
-      margin-top:60px;
-    }
+/* ---------- SECTIONS ---------- */
+section{
+  max-width:1200px;
+  margin:80px auto;
+  padding:0 20px;
+}
 
-    h2{
-      font-size:28px;
-      margin-bottom:12px;
-    }
+.section-title{
+  text-align:center;
+  margin-bottom:50px;
+}
 
-    .subtitle{
-      color:var(--muted);
-      max-width:600px;
-      margin-bottom:32px;
-    }
+.section-title h2{
+  font-size:36px;
+  margin-bottom:10px;
+}
 
-    /* FEATURES */
-    .features{
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-      gap:20px;
-    }
+.section-title p{
+  color:var(--muted);
+  font-size:18px;
+}
 
-    .feature{
-      background:var(--card);
-      padding:22px;
-      border-radius:18px;
-      border:1px solid rgba(255,255,255,0.05);
-    }
+/* ---------- FEATURES ---------- */
+.features{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:28px;
+}
 
-    .feature h3{
-      margin-top:0;
-    }
+.feature{
+  background:white;
+  border-radius:22px;
+  padding:30px;
+  text-align:center;
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
 
-    .feature p{
-      color:var(--muted);
-      font-size:14px;
-    }
+.feature span{
+  font-size:48px;
+  display:block;
+  margin-bottom:14px;
+}
 
-    /* DOWNLOAD */
-    .download{
-      background:linear-gradient(135deg,rgba(6,182,212,0.15),rgba(124,58,237,0.15));
-      padding:40px;
-      border-radius:24px;
-      text-align:center;
-      margin-top:60px;
-    }
+.feature h3{
+  margin-bottom:10px;
+}
 
-    .download h2{
-      margin-top:0;
-    }
+/* ---------- TOURISM CTA ---------- */
+.tourism{
+  background:linear-gradient(135deg,var(--primary),var(--secondary));
+  color:white;
+  padding:70px 20px;
+  text-align:center;
+}
 
-    footer{
-      margin-top:60px;
-      text-align:center;
-      color:var(--muted);
-      font-size:13px;
-    }
+.tourism h2{
+  font-size:38px;
+  margin-bottom:12px;
+}
 
-    @media(max-width:900px){
-      .hero{
-        grid-template-columns:1fr;
-        text-align:center;
-      }
-      .btn.secondary{
-        display:block;
-        margin:12px auto 0;
-      }
-    }
-  </style>
+.tourism p{
+  font-size:18px;
+  margin-bottom:30px;
+}
+
+/* ---------- FOOTER ---------- */
+footer{
+  background:var(--dark);
+  color:#cbd5f5;
+  text-align:center;
+  padding:30px 20px;
+  font-size:14px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media(max-width:900px){
+  .header-container{
+    grid-template-columns:1fr;
+    text-align:center;
+  }
+
+  .btn.secondary{
+    display:block;
+    margin:14px auto 0;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <div class="container">
-
-    <!-- HERO -->
-    <div class="hero">
-      <div>
-        <h1>Tupã+</h1>
-        <p>
-          O aplicativo oficial para conhecer a história, os pontos turísticos,
-          eventos e a cultura da cidade de Tupã.
-        </p>
-
-        <a class="btn primary" href="apks/tupa-plus.apk" download>
-          Baixar APK
-        </a>
-        <a class="btn secondary" href="#funcionalidades">
-          Conhecer funcionalidades
-        </a>
-      </div>
-
-      <div class="hero-card">
-        <img src="icons/logo_tupaplus.png" alt="Tupã+">
-        <p>
-          Uma experiência digital moderna para moradores,
-          turistas e estudantes.
-        </p>
-      </div>
-    </div>
-
-    <!-- FUNCIONALIDADES -->
-    <section id="funcionalidades">
-      <h2>Funcionalidades</h2>
-      <p class="subtitle">
-        Tudo o que você precisa saber sobre Tupã em um só lugar.
-      </p>
-
-      <div class="features">
-        <div class="feature">
-          <h3>📍 Pontos Turísticos</h3>
-          <p>
-            Conheça atrações, praças, museus e locais históricos da cidade.
-          </p>
-        </div>
-
-        <div class="feature">
-          <h3>🏛️ História da Cidade</h3>
-          <p>
-            Conteúdos educativos sobre a origem, cultura e desenvolvimento de Tupã.
-          </p>
-        </div>
-
-        <div class="feature">
-          <h3>📅 Eventos</h3>
-          <p>
-            Fique por dentro dos eventos culturais, turísticos e comemorativos.
-          </p>
-        </div>
-
-        <div class="feature">
-          <h3>ℹ️ Informações Úteis</h3>
-          <p>
-            Dados importantes para moradores e visitantes, sempre atualizados.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- DOWNLOAD -->
-    <section class="download">
-      <h2>Baixe agora o Tupã+</h2>
-      <p class="subtitle">
-        Disponível para dispositivos Android.
+<!-- HERO / HEADER -->
+<header>
+  <div class="header-container">
+    <div>
+      <h1>Tupã+</h1>
+      <p>
+        O guia turístico digital de Tupã.
+        Descubra pontos turísticos, história,
+        cultura e experiências únicas da cidade.
       </p>
 
       <a class="btn primary" href="apks/tupa-plus.apk" download>
-        Download do APK
+        Baixar aplicativo
       </a>
-    </section>
+      <a class="btn secondary" href="#atracoes">
+        Explorar atrações
+      </a>
+    </div>
 
-    <footer>
-      © 2026 • Tupã+ • Victor Fanfoni<br>
-      Desenvolvido para promover cultura, turismo e informação.
-    </footer>
-
+    <div class="app-card">
+      <img src="icons/logo_tupaplus.png" alt="Tupã+">
+      <p>
+        Leve Tupã no seu bolso e explore a cidade
+        com informações oficiais e atualizadas.
+      </p>
+    </div>
   </div>
+</header>
+
+<!-- FEATURES -->
+<section id="atracoes">
+  <div class="section-title">
+    <h2>Explore Tupã</h2>
+    <p>Tudo o que você precisa para aproveitar a cidade</p>
+  </div>
+
+  <div class="features">
+    <div class="feature">
+      <span>📍</span>
+      <h3>Pontos Turísticos</h3>
+      <p>
+        Praças, museus, monumentos e locais
+        que fazem parte da identidade de Tupã.
+      </p>
+    </div>
+
+    <div class="feature">
+      <span>🏛️</span>
+      <h3>História e Cultura</h3>
+      <p>
+        Conheça a história da cidade,
+        seus personagens e tradições.
+      </p>
+    </div>
+
+    <div class="feature">
+      <span>🖼️</span>
+      <h3>Galeria de Fotos</h3>
+      <p>
+        Imagens históricas e atuais
+        mostrando a evolução da cidade.
+      </p>
+    </div>
+
+    <div class="feature">
+      <span>ℹ️</span>
+      <h3>Informações ao Visitante</h3>
+      <p>
+        Dados úteis para turistas,
+        moradores e estudantes.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="tourism">
+  <h2>Descubra Tupã com o Tupã+</h2>
+  <p>
+    Baixe gratuitamente o aplicativo
+    e comece sua jornada pela cidade.
+  </p>
+
+  <a class="btn primary" href="apks/tupa-plus.apk" download>
+    Baixar agora
+  </a>
+</section>
+
+<footer>
+  © 2026 • Tupã+ • Victor Fanfoni<br>
+  Projeto voltado à promoção do turismo e cultura da cidade de Tupã.
+</footer>
 
 </body>
 </html>
